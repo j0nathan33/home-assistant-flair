@@ -36,6 +36,7 @@ PLATFORMS = [
 
 DEFAULT_NAME = "Flair"
 TIMEOUT = 20
+BATTERY_VOLTAGE_PRECISION = 2
 
 FLAIR_ERRORS = (
     asyncio.TimeoutError,
