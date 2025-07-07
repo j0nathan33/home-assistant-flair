@@ -26,7 +26,7 @@ from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from .const import DOMAIN, TYPE_TO_MODEL, BATTERY_VOLTAGE_PRECISION
+from .const import DOMAIN, TYPE_TO_MODEL, VOLTAGE_PRECISION
 from .coordinator import FlairDataUpdateCoordinator
 
 
@@ -474,7 +474,7 @@ class PuckVoltage(CoordinatorEntity, SensorEntity):
     def suggested_display_precision(self) -> int:
         """Return display precision for the voltage sensor."""
 
-        return BATTERY_VOLTAGE_PRECISION
+        return VOLTAGE_PRECISION
 
     @property
     def device_class(self) -> SensorDeviceClass:
@@ -885,7 +885,7 @@ class VentVoltage(CoordinatorEntity, SensorEntity):
     def suggested_display_precision(self) -> int:
         """Return display precision for the voltage sensor."""
 
-        return BATTERY_VOLTAGE_PRECISION
+        return VOLTAGE_PRECISION
 
     @property
     def device_class(self) -> SensorDeviceClass:
